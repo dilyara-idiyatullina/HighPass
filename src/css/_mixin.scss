@@ -1,0 +1,57 @@
+@mixin marker($top, $right, $text) {
+  &::after {
+    content: $text;
+    display: block;
+    padding: 7px 15px;
+    position: absolute;
+    top: $top;
+    right: $right;
+    background-color: $markerBackgroundColor;
+    color: $markerFontColor;
+    font-size: 14px;
+    line-height: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+  }
+}
+
+@mixin sm-marker($padding, $text) {
+  &::after {
+    content: $text;
+    display: block;
+    padding: $padding;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: $markerBackgroundColor;
+    color: $markerFontColor;
+    font-size: 12px;
+    line-height: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+  }
+}
+
+@mixin btn {
+  display: inline-block;
+  padding: 14px 19px;
+  background-color: $orange;
+  font-family: 'Roboto', sans-serif;
+  border: 3px solid $orange;
+  font-size: 16px;
+  line-height: 1; 
+  font-weight: 700;
+  color: $btnFontColor;  
+  cursor: pointer;
+  transition-property: border-color, background-color;
+  transition-duration: .3s;
+  transition-timing-function: ease;
+}
+
+@mixin section-header {
+  font-family: 'TTFirsNeue', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;  
+  color: $darkFontColor;   
+}
